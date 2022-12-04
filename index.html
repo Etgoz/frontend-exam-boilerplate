@@ -10,10 +10,10 @@
 		<h1>Currency Converter</h1>
 
 		<section class="currency-converter-form">
-			<form id="currency-converter-form" action="">
+			<form id="currency-converter-form" action="./index.html" method="GET">
 				<div>
 					<label for="currency-select">Currency:</label>
-					<select name="currency-select" id="currency-select">
+					<select name="curr" id="currency-select">
 						<option value="01">USD (United States Dollar)</option>
 						<option value="27">EUR (Euro)</option>
 						<option value="02">GBP (Great Britain Pound)</option>
@@ -24,9 +24,9 @@
 				</div>
 				<div>
 					<label for="date-picker">Exchange Date:</label>
-					<input type="date" id="date-picker" />
+					<input type="date" name="rdate" id="date-picker" />
 				</div>
-				<input type="submit" value="Submit" />
+				<input type="submit" />
 				<div class="result">
 					Exchange Rate to ILS: <span id="exchangeResult">3.452</span>
 				</div>

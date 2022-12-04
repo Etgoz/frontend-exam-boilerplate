@@ -44,7 +44,13 @@ function attachListeners() {
  * Complete the function below to get the exchange rate from the API
  */
 
-async function getExchangeRateFromApi(dateCode: string, currencyCode: string) {}
+async function getExchangeRateFromApi(dateCode: string, currencyCode: string) {
+	const response = await fetch(
+		`https://currency-ror1.vercel.app/api/currency?rdate=${dateCode}&curr=${currencyCode}`
+	);
+	const currency = await response.text();
+	return currency;
+}
 
 /**
  * Complete the function below to get the data from the form,
